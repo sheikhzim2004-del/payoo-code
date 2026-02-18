@@ -26,11 +26,13 @@ function showOnly(id){
     // console.log('show only click')
     const addMoney = document.getElementById('add-money');
     const cashout = document.getElementById('cashout');
+    const history = document.getElementById('history');
     // console.log(`addmoney: ${addMoney} , cashout: ${cashout}`)
 
     //shobaike hide koro
     addMoney.classList.add('hidden');
     cashout.classList.add('hidden');
+    history.classList.add('hidden');
 
 
     //click kora id kea show koro
@@ -51,7 +53,13 @@ for(const btn of allBtn){
     });
 };
 
-// const btn = document.getElementById('btn');
-// btn.addEventListener('click', function(){
-//     btn.classList.add('btn-success');
-// });
+
+
+
+
+
+//logout btn work successfully work
+const logoutBtn = document.getElementById('logout-btn');
+logoutBtn.addEventListener('click', function(){
+    window.location.assign('./index.html');
+});

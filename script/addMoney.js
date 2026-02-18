@@ -26,6 +26,23 @@ document.getElementById('add-money-btn').addEventListener('click', function(){
         alert(`Add Money Successfully from ${addMoneyBankSelect}
              at ${new Date()}`);
         setBalance(newBalance);
+
+
+        //transiction system
+        //1, call history
+        const history = document.getElementById('history-container');
+
+        //2, creat a div
+        const newDiv = document.createElement('div');
+
+        //3, write innerHtml
+        newDiv.innerHTML = `
+        <div class="history-card bg-base-100 p-4 rounded-sm">
+            Add Money Successfully from ${addMoneyBankSelect}, account No ${bankAccNumber} at ${new Date()};
+            </div>
+        `
+        //4, append
+        history.append(newDiv);
     }
     else{
         alert('Invalid Pin');
