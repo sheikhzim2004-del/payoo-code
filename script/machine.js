@@ -61,5 +61,6 @@ for(const btn of allBtn){
 //logout btn work successfully work
 const logoutBtn = document.getElementById('logout-btn');
 logoutBtn.addEventListener('click', function(){
+    alert('Are You Sure?');
     window.location.assign('./index.html');
 });
