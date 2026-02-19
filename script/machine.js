@@ -27,12 +27,14 @@ function showOnly(id){
     const addMoney = document.getElementById('add-money');
     const cashout = document.getElementById('cashout');
     const history = document.getElementById('history');
+    const transfer = document.getElementById('transfer');
     // console.log(`addmoney: ${addMoney} , cashout: ${cashout}`)
 
     //shobaike hide koro
     addMoney.classList.add('hidden');
     cashout.classList.add('hidden');
     history.classList.add('hidden');
+    transfer.classList.add('hidden');
 
 
     //click kora id kea show koro
