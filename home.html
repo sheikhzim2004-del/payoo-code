@@ -68,7 +68,7 @@
                 <img src="./assets/opt-4.png" alt="">
                 <p>Get Bonus</p>
             </button>
-            <button class="btn flex-col h-full py-4 btn-info btn-soft">
+            <button onclick="showOnly('bill')" class="btn flex-col h-full py-4 btn-info btn-soft">
                 <img src="./assets/opt-5.png" alt="">
                 <p>Pay Bill</p>
             </button>
@@ -178,6 +178,47 @@
         </div>
     </section>
 
+    <!-- pay bill section -->
+    <section id="bill" class="w-11/12 mx-auto space-y-2 hidden">
+        <h1 class="text-2xl font-extrabold text-neutral">Pay Bill</h1>
+        <div class="form">
+            <div class="card bg-base-100 w-full mx-auto rounded-2xl">
+                <div class="card-body">
+                    <fieldset class="fieldset">
+
+                        <label class="label text-neutral font-bold">Select to Pay</label>
+                        <select id="pay-bill-select" class="select bg-base-200 w-full rounded-full border-none">
+                            <option disabled selected>Select A Pay Bill</option>
+                            <option value="PALLI">Palli Biddut (Prepaid)</option>
+                            <option value="BASHUNDHORA">Bashundhora LP Gas Ltd</option>
+                            <option value="EASYTRAX">Easytrax</option>
+                            <option value="AKASH">Akash Digital TV</option>
+                            <option value="CARNIVAL">Carnival Internet</option>
+                            <option value="BIMA">Jibon Bima Corporation(JBC)</option>
+                        </select>
+                        <br>
+                        <label class="label text-neutral font-bold">Biller Account Number</label>
+                        <input id="bill-number" maxlength="16" minlength="11" type="text"
+                            class="input rounded-full bg-base-200 border-none w-full"
+                            placeholder="Enter account number" />
+                        <br>
+                        <label class="label font-bold text-neutral">Amount to Pay</label>
+                        <input id="bill-amount" type="text" class="input rounded-full bg-base-200 border-none w-full"
+                            placeholder="Add amount to pay" />
+                        <br>
+                        <label class="label font-bold text-neutral">Pin Number</label>
+                        <input id="bill-pin" maxlength="4" minlength="4" type="password"
+                            class="input rounded-full bg-base-200 border-none w-full"
+                            placeholder="Enter 4 digit pin number" />
+
+                        <!-- btn -->
+                        <button id="bill-btn" class="btn btn-primary mt-2 rounded-full">Pay Now</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- transiction / history section -->
      <section id="history" class="w-11/12 mx-auto space-y-2 hidden">
         <h1 class="text-2xl font-extrabold text-neutral">Transiction</h1>
@@ -192,6 +233,7 @@
     <script src="./script/machine.js"></script>
     <script src="./script/addMoney.js"></script>
     <script src="./script/cashout.js"></script>
+    <script src="./script/payBill.js"></script>
     <script src="./script/transfer.js"></script>
 </body>
 

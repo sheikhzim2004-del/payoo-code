@@ -30,6 +30,23 @@ document.getElementById('transfer-btn').addEventListener('click', function(){
         alert('Money Transfer Successfull');
         setBalance(newBalance);
 
+
+        //transiction system
+        //1, call history
+        const history = document.getElementById('history-container');
+
+        //2, creat a div
+        const newDiv = document.createElement('div');
+
+        //3, write innerHtml
+        newDiv.innerHTML = `
+        <div class="history-card bg-base-100 p-4 rounded-sm">
+            Money Transfer Successfully to ${userAccNumber}, at ${new Date()};
+            </div>
+        `
+         //4, append
+        history.append(newDiv);
+
     }
     console.log(pin);
     

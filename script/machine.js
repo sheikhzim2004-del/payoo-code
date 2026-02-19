@@ -28,6 +28,7 @@ function showOnly(id){
     const cashout = document.getElementById('cashout');
     const history = document.getElementById('history');
     const transfer = document.getElementById('transfer');
+    const bill = document.getElementById('bill');
     // console.log(`addmoney: ${addMoney} , cashout: ${cashout}`)
 
     //shobaike hide koro
@@ -35,6 +36,7 @@ function showOnly(id){
     cashout.classList.add('hidden');
     history.classList.add('hidden');
     transfer.classList.add('hidden');
+    bill.classList.add('hidden');
 
 
     //click kora id kea show koro
